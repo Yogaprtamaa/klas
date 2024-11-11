@@ -1,0 +1,263 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem;
+    background-image: url('header-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 139, 0.4);
+    z-index: 1;
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Navigasi */
+nav {
+    text-align: center;
+    background-color: #0077b6;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Galeri Foto */
+#galeri {
+    padding: 2rem;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Buku Kenangan */
+#buku-kenangan {
+    padding: 2rem;
+    text-align: center;
+}
+
+#buku-kenangan h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem; /* Menambahkan jarak lebih besar antara judul dan section */
+    color: #333;
+}
+
+.yearbook {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.yearbook {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.student {
+    max-width: 200px;
+    padding: 1rem;
+    border: 1px solid #ddd; /* Border tipis untuk card */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan card */
+    background-color: #fff; /* Latar belakang putih */
+    text-align: center;
+}
+
+.student img {
+    width: 100%;
+    height: 150px; /* Mengubah tinggi untuk membuat persegi panjang */
+    border-radius: 8px; /* Membulatkan sudut gambar agar konsisten dengan card */
+    object-fit: cover;
+}
+
+.student h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.student p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #555; /* Warna teks lebih lembut */
+}
+
+
+
+/* Pesan & Kesan */
+#pesan-kesan {
+    padding: 2rem;
+    background-color: #d0e7ff;
+}
+
+.message {
+    background-color: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 5px solid #0077b6;
+}
+
+/* Profil Teman */
+#profil {
+    padding: 2rem;
+    text-align: center;
+}
+.profile {
+    max-width: 200px;
+    padding: 1rem;
+    border: 1px solid #ddd; /* Border tipis untuk card */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan card */
+    background-color: #fff; /* Latar belakang putih */
+    text-align: center;
+}
+.profile {
+    display: inline-block;
+    text-align: center;
+    margin: 1rem;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0%;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+
+    /* Navigasi */
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    /* Galeri Foto */
+    .gallery img {
+        width: 100px;
+        height: 75px;
+    }
+
+    /* Buku Kenangan */
+    .yearbook {
+        flex-direction: column; /* Membuat card dalam satu kolom */
+        gap: 1.5rem; /* Memberikan jarak antar card */
+        align-items: center;
+    }
+
+    .student {
+        max-width: 90%; /* Menggunakan lebar hampir penuh pada layar mobile */
+        padding: 1rem;
+    }
+
+    .student img {
+        height: auto; /* Menghilangkan tinggi tetap agar sesuai dengan lebar */
+        max-width: 100%; /* Mengisi lebar penuh dari card */
+    }
+
+    .student h3 {
+        font-size: 1rem;
+    }
+
+    /* Profil Teman */
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Pesan & Kesan */
+    #pesan-kesan {
+        padding: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 0.5rem;
+    }
+}
